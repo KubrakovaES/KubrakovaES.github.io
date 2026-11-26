@@ -69,3 +69,12 @@ footer{color:var(--muted);font-size:14px;text-align:center;padding:24px 0 40px}
 .hub .big-link:hover{background:rgba(255,255,255,.14);box-shadow:0 10px 26px rgba(0,0,0,.3)}
 .review:nth-child(even){background:linear-gradient(135deg,#e3f4f6,#e6eefb);border-left-color:var(--blue)}
 .review:nth-child(even) .who{color:var(--blue)}
+/* блоки для поиска и нейросетей */
+.brief p{margin:0 0 8px}.brief .upd{margin:0;font-size:13px;color:var(--muted)}
+.tbl-wrap{overflow-x:auto}.facts{width:100%;border-collapse:collapse;font-size:16px}
+.facts th,.facts td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+.facts th{color:var(--teal-d);font-weight:800;background:#eef6f7}
+.faq-item{padding:12px 0;border-bottom:1px solid var(--line)}.faq-item:last-child{border-bottom:0}
+.faq-item h3{margin:0 0 6px}.faq-item p{margin:0}
+.stats{grid-template-columns:repeat(5,1fr)}@media(max-width:900px){.stats{grid-template-columns:repeat(3,1fr)}}@media(max-width:560px){.stats{grid-template-columns:repeat(2,1fr)}}
+.author-line{margin:10px 0 0;font-size:14px;opacity:.9}.author-line a{color:inherit;font-weight:700}
