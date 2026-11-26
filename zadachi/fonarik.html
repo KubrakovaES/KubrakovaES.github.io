@@ -1,0 +1,49 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Снаряд и взлетающий фонарик — решение, видео, модель</title>
+<meta name="description" content="Задача по кинематике: под каким углом выпустить снаряд, чтобы попасть во взлетающий фонарик. Решение, видеоразбор и интерактивная модель.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/site.css"><script src="../assets/metrika.js"></script>
+<script>window.MathJax={tex:{inlineMath:[['\\(','\\)']]}};</script><script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script></head><body><noscript><div><img src="https://mc.yandex.ru/watch/114669607" style="position:absolute;left:-9999px" alt=""></div></noscript>
+<header class="top"><div class="wrap"><nav class="crumbs"><a href="../">Главная</a> / <a href="./">Интересные задачи</a></nav><div class="kicker">Кинематика · бросок под углом</div>
+<h1>Снаряд и взлетающий фонарик</h1></div></header>
+<main class="wrap">
+<section class="card"><h2>Условие</h2>
+<p>Фонарик начинает подниматься вертикально из состояния покоя с ускорением \(a = 2\) м/с². В тот же момент с расстояния \(L = 54\) м по горизонтали с той же высоты выпускают снаряд со скоростью \(v = 36\) м/с. Под каким углом к горизонту нужно выпустить снаряд, чтобы он попал в фонарик? Сопротивлением воздуха пренебречь, \(g = 10\) м/с².</p></section>
+
+<section class="card"><h2>Видеоразбор</h2>
+<div class="video"><iframe src="https://vkvideo.ru/video_ext.php?oid=-179186688&id=456239041&hd=2" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock" allowfullscreen loading="lazy" title="Видеоразбор задачи"></iframe></div>
+<p class="readout">Если видео не загружается, <a href="https://vkvideo.ru/video-179186688_456239041" target="_blank" rel="noopener">откройте его в VK Видео</a>.</p></section>
+
+<section class="card"><h2>Интерактивная модель</h2>
+<div class="sim"><canvas id="cv" width="760" height="460" aria-label="Модель полёта снаряда и фонарика"></canvas>
+<div class="ctrl">
+<label for="ang">Угол: <span id="angV"></span>°</label><input id="ang" type="range" min="1" max="89" value="30">
+<label for="spd">Скорость: <span id="spdV"></span> м/с</label><input id="spd" type="range" min="5" max="60" value="36">
+<label for="tm">Время: <span id="tV"></span> с</label><input id="tm" type="range" min="0" max="1000" value="0">
+<div class="row"><button class="btn" id="play">▶ Пуск</button><button class="btn alt" id="reset">⟲ Сначала</button></div>
+<div class="row"><button class="btn blue" data-a="15" data-v="36">15°, 36 м/с</button><button class="btn blue" data-a="75" data-v="36">75°, 36 м/с</button></div>
+<div class="status" id="st">Выберите угол и скорость, нажмите «Пуск».</div>
+<div class="readout" id="ro"></div></div></div>
+<details><summary>Задания для исследования</summary><ul>
+<li>Найдите при \(v = 36\) м/с два угла, при которых снаряд попадает в фонарик. Сравните время и высоту встречи.</li>
+<li>Какова минимальная скорость, при которой попадание ещё возможно? Проверьте формулой \(v_{\min}^2 = (g+a)L\).</li>
+<li>Почему при скорости 60 м/с угол 45° не даёт попадания?</li></ul></details>
+<details><summary>Условия модели</summary><p>Тела — материальные точки, сопротивления воздуха нет. Попадание засчитывается, если на вертикали фонарика высоты совпадают с точностью до 5 см. Масштаб подстраивается под параметры — смотрите на подписи осей.</p></details>
+</section>
+
+<section class="card"><h2>Решение</h2>
+<p>Ось \(Ox\) направим горизонтально к фонарику, \(Oy\) — вертикально вверх, начало — в точке запуска. Угол запуска \(\alpha\).</p>
+<p>Снаряд: \(x = v\cos\alpha \cdot t,\quad y = v\sin\alpha\cdot t - \dfrac{gt^2}{2}.\)</p>
+<p>Фонарик: \(x = L,\quad y = \dfrac{at^2}{2}.\)</p>
+<p>В момент встречи координаты совпадают: \(v\cos\alpha\cdot t = L\) и \(v\sin\alpha\cdot t - \dfrac{gt^2}{2} = \dfrac{at^2}{2}\), откуда \(v\sin\alpha = \dfrac{(g+a)t}{2}\).</p>
+<p>Подставив \(t = \dfrac{L}{v\cos\alpha}\), получаем \(2v^2\sin\alpha\cos\alpha = (g+a)L\), то есть</p>
+<p style="text-align:center">\(\sin 2\alpha = \dfrac{(g+a)L}{v^2} = \dfrac{12\cdot 54}{36^2} = \dfrac{1}{2}.\)</p>
+<p>Отсюда \(2\alpha = 30^\circ\) или \(2\alpha = 150^\circ\).</p>
+<p class="answer">Ответ: \(\alpha = 15^\circ\) или \(\alpha = 75^\circ\).</p>
+<p>При \(15^\circ\) встреча через 1,55 с на высоте 2,41 м; при \(75^\circ\) — через 5,80 с на высоте 33,59 м. Горизонтальная скорость при крутом броске меньше, поэтому снаряд догоняет фонарик позже и выше.</p>
+</section>
+
+<section class="card"><h2>Нужна помощь с физикой?</h2><p><b>Кубракова Екатерина Сергеевна</b> — репетитор по физике и информатике. Готовлю к ЕГЭ и ОГЭ индивидуально и в мини-группах.</p>
+<div class="row"><a class="btn" href="https://t.me/KubrakovaES" target="_blank" rel="noopener">Написать в Telegram</a><a class="btn alt" href="https://kubrakovaes.github.io/ege18-fizika/">Тренажёр задания 18</a><a class="btn alt" href="../">Обо мне</a></div></section>
+</main><footer><a href="../">Кубракова Е. С.</a> · <a href="https://t.me/KubrakovaES">@KubrakovaES</a></footer>
+<script src="fonarik.js"></script></body></html>
