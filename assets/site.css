@@ -42,8 +42,8 @@ footer{color:var(--muted);font-size:14px;text-align:center;padding:24px 0 40px}
 @media(max-width:700px){.split,.split.rev{grid-template-columns:1fr}.split.rev .ph{order:0}.split .ph img{max-width:260px;margin:0 auto}}
 .split ul{padding-left:20px;margin:8px 0}.split li{margin:4px 0}
 .card h3{margin:0 0 8px;font-size:19px;color:var(--teal-d)}
-.reviews{columns:3 280px;column-gap:16px}
-.review{break-inside:avoid;background:#fbfeff;border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:14px;padding:16px 18px;margin:0 0 16px}
+.reviews{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-bottom:16px}
+.review{break-inside:avoid;background:#fbfeff;border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:14px;padding:16px 18px;margin:0}
 .review h4{margin:0 0 8px;font-size:17px;font-weight:800;color:var(--ink);line-height:1.3}
 .review p{margin:0;font-style:italic;color:#29454f}
 .review .who{margin-top:10px;color:var(--teal-d);font-weight:700;font-size:13px;font-style:normal}
@@ -60,3 +60,12 @@ footer{color:var(--muted);font-size:14px;text-align:center;padding:24px 0 40px}
 .soc.yt{background:linear-gradient(120deg,#174a96,#3a6fd0)}.soc.tl{background:linear-gradient(120deg,#0b7f84,#16b3a8)}
 .btn.max{background:linear-gradient(90deg,#3b5bff,#8a3cff)}.btn.max:hover{filter:brightness(.92)}
 .hero .btn.alt{background:rgba(255,255,255,.18);color:#fff}
+
+.hub{background:linear-gradient(135deg,#0b2a3a 0%,#123f63 55%,#0b5f6a 100%);border-radius:22px;padding:30px 28px;margin:0 0 22px;color:#fff;box-shadow:0 14px 34px rgba(11,42,58,.28)}
+.hub h2{color:#fff;margin:0 0 4px}.hub .hub-sub{color:#a9d9e0;margin:0 0 18px}
+.hub .big-link{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-top:5px solid #2fd0c8;color:#fff}
+.hub .big-link.blue{border-top-color:#5aa0ff}
+.hub .big-link span{color:#d3e9ee}.hub .big-link em{color:#5fe3da}.hub .big-link.blue em{color:#8cc0ff}
+.hub .big-link:hover{background:rgba(255,255,255,.14);box-shadow:0 10px 26px rgba(0,0,0,.3)}
+.review:nth-child(even){background:linear-gradient(135deg,#e3f4f6,#e6eefb);border-left-color:var(--blue)}
+.review:nth-child(even) .who{color:var(--blue)}
